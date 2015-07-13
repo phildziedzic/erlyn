@@ -8,7 +8,6 @@
 	// same as above
 
 //----------------------NAVIGATION------------------------//
-// when user scrolls down, nav sticks to top
 
 // active page underlined, others faded
 // when hovering over other nav element

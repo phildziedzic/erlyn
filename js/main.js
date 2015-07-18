@@ -87,7 +87,15 @@
 //----------------------ORDER DIV------------------------//
 // three order packages pop in
 	// on hover of any, slightly magnifies in front of others, border turns same color as order button
+	
 	// on click order button
+$('.order-button').on('click', function() {
+	$('.modal').addClass('show-modal');
+});
+
+$('.close-x').on('click', function() {
+	$('.modal').removeClass('show-modal');
+});
 		// info form pops in front of screen asking for contact and billing info
 		// if fields not submitted, highlight in red
 		// otherwise display success message and dismiss window

@@ -117,13 +117,30 @@
             <h3>Thanks for your interest!</h3>
             <a class="close-x" href="#">x</a>
             <p>The Erlyn is currently a concept product. Please leave your email and comments below and we'll keep you updated if/when it exists!</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>          
-            <button class="submit-button">SUBMIT</button>
-        </div>
+
+            <ul id="errors" class="error message">
+                <li id="info">There were some problems with your form submission:</li>
+            </ul>
+            <p id="success" class="success message">Thanks for your message! We will get back to you ASAP!</p>
+            
+            <br>        
+            
+            <form id="contact-form" class="clearfix" ation="http://formspree.io/phil.dziedzic@gmail.com" method="post">
+                <div class="clearfix">
+                    <input type="text" id="name" name="name" placeholder="Name" autofocus>
+                    <input type="email" id="email" name="" placeholder="Email address" required>
+                    <input type="text" id="comments" name="comments" placeholder="Any other comments?">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <input class="submit-button" type="submit" value="Submit" id="submit">
+            </form>
+
+<!--             <button class="submit-button">SUBMIT</button>
+ -->        </div>
 
         <div class="overlay-background"></div>
 

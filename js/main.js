@@ -98,6 +98,19 @@ $('.position4').hover( function () {
 // if narrow screen (mobile)
 	// show static image of glasses being filled from the Erlyn bottle
 
+var distance1 = $('#party').offset().top;
+
+$(window).on ('scroll', function() {
+    if ($(this).scrollTop() > distance1) {
+        $('.stream1').slideDown('slow');
+        $('.party-glass').fadeIn('slow');
+    } else {
+        $('.stream1').slideUp('slow');
+        $('.party-glass').fadeOut('slow');
+    }
+});
+
+
 //----------------------HOW ERLYN WORKS 2 DIV------------------------//
 
 var distance2 = $('#refill').offset().top;

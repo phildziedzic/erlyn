@@ -946,10 +946,92 @@ footer a {
 }
 
 @media screen and (max-width: 600px){
+  /*nav stuff*/
   .hamburger {
     opacity: 1;
     visibility: visible;
   }
+
+  nav li {
+    display: block;
+    text-align: center;
+    clear: both;
+  }
+
+  /*landing stuff*/
+  .landing {
+    height: 500px;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  #tagline {
+    font-size: 16px;
+  }
+
+  /*how-it-works stuff*/
+  section h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  #no-margin {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .step {
+    margin-top: 50px;
+  }
+
+  .how-it-works p {
+    width: 70%;
+    display: block;
+    margin: 25px auto;
+  }
+
+  /*pour*/
+  .party-pour {
+    width: 160px;
+    padding-right: 125px;
+  }
+
+  /*refill*/
+  .barrel-wrapper {
+    width: 350px;
+    margin-top: 50px;
+  }
+
+  .refill-barrel{
+    width: 200px;
+  }
+
+  .stream2 {
+    bottom: 54px;
+  }
+
+  .refill-filled {
+    left: 36%;
+  }
+
+  /*back home*/
+  .bar-wrapper {
+    width: 350px;
+  }
+
+  .home-bar {
+    width: 250px;
+    bottom: -120px;
+  }
+
+  .home-bottle {
+    width: 70px;
+    top: 44%;
+  }
+
+
 
 }
 

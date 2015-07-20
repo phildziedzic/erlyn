@@ -947,16 +947,46 @@ footer a {
 
 @media screen and (max-width: 600px){
   /*nav stuff*/
-  .hamburger {
-    opacity: 1;
-    visibility: visible;
+  #nav-home {
+    margin-top: 10px;
+    margin-left: -18px;
+  }
+
+  nav {
+    clear: both;
+    float: none;
+  }
+
+  nav ul{
+    display: block;
+    width: 100%;
+    background-color: black;
+    opacity: .9;
+    position: fixed;
+    top: 0px;
+    right: 0px;
   }
 
   nav li {
     display: block;
+    float: none;
     text-align: center;
     clear: both;
+    margin-right: -55px;
   }
+
+  .hamburger {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+
+
+
+
 
   /*landing stuff*/
   .landing {

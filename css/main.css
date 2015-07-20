@@ -155,10 +155,9 @@ nav a:hover {
 }
 
 /* Hide the hamburger icon by default */
-
 .hamburger {
   width: 2.5rem;
-  display: block;
+  display: inline-block;
   opacity: 0;
   visibility: hidden;
 }
@@ -173,6 +172,10 @@ nav a:hover {
   opacity: 1;
   -webkit-filter: drop-shadow(1px 1px 1px black);
   transition: all 150ms linear 50ms;
+}
+
+.mobile-slide {
+  height: 200px;
 }
 
 /* Second line */
@@ -965,7 +968,8 @@ footer a {
     position: fixed;
     top: 0px;
     right: 0px;
-  }
+    height: 0px;
+ }
 
   nav li {
     display: block;
@@ -979,8 +983,9 @@ footer a {
     opacity: 1;
     visibility: visible;
     position: absolute;
-    right: 0px;
+    right: 25px;
     top: 0px;
+    z-index: 1000;
   }
 
 

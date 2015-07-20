@@ -15,6 +15,12 @@
 // 	}, 500);
 // });
 
+$(".hamburger").on("click", function(e) {
+    e.preventDefault();
+    $('#menu').toggleClass('mobile-slide');
+    $('#menu').toggleClass('hidden');
+});
+
 $("#nav-design").on("click", function(e) {
 	e.preventDefault();
 	$('html, body').animate({

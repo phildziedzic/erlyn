@@ -9,10 +9,12 @@
 
 //----------------------NAVIGATION------------------------//
 
-// active page underlined, others faded
-// when hovering over other nav element
-	// underline slides up from bottom
-	// this element unfades
+// $(".jumper").on("click", function(e) {
+// 	e.preventDefault();
+//     $("body, html").animate({ 
+//         scrollTop: $( $(this).attr('href') ).offset().top 
+//     }, 600); 
+// });
 
 // clicking on nav element
 	// remove underline from all others
@@ -32,9 +34,22 @@
 			// slide out nav elements to right
 
 //----------------------THE ERLYN DESIGN DIV------------------------//
-// Bottle sticks to middle center of page
-	// as user scrolls, fade in one "feature" and leader line at a time
-	// scrolling further, fade out first set of features and fade in second set
+
+$('.position1').hover( function () {
+	$('#durable').toggleClass('faded');
+});
+
+$('.position2').hover( function () {
+	$('#recycled').toggleClass('faded');
+});
+
+$('.position3').hover( function () {
+	$('#insulation').toggleClass('faded');
+});
+
+$('.position4').hover( function () {
+	$('#nonslip').toggleClass('faded');
+});
 
 // if narrow screen (mobile)
 	// position bottle graphic center with circle touch points

@@ -13,7 +13,6 @@
 body {
   color: #171714;
   font-family: "Josefin+Sans", sans-serif;
-  font-size: 1em;
   line-height: 1.4;
   box-sizing: border-box;
 }
@@ -145,12 +144,10 @@ nav a {
   padding: 15px;
   margin-top: 5px;
   opacity: .5;
-/*  text-shadow: 1px 1px 1px black;
-*/  transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
 }
 
 nav a:hover {
-  color: white;
   font-weight: 300;
   opacity: 1;
 }
@@ -259,6 +256,33 @@ section h2 {
   margin-bottom: 100px;
 }
 
+.erlyn-design {
+  overflow: hidden;
+  background-image: url(../images/barrels-light.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.erlyn-design h4 {
+  font-size: 24px;
+  font-family: "Josefin+Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.erlyn-design p {
+  font-size: 18px;
+  font-family: "Josefin+Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 10px
+}
+
+.feature div {
+  transition: all .3s ease-in-out;
+}
+
 .feature {
   float: left;
   width: 30%;
@@ -271,51 +295,48 @@ section h2 {
 }
 
 
+
+/*styling for feature circles*/
+
 .erlyn-design img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
-  margin-top: 50px;
-  clear: both;
+  max-width: 100%;
 }
 
-.erlyn-design h4{
-  font-size: 24px;
-  font-family: "Josefin+Sans", sans-serif;
-  font-weight: 400;
-}
-
-.erlyn-design {
-  overflow: hidden;
-  background-image: url(../images/barrels-light.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
-}
+.feature-center {
+  float: left;
+  width: 30%;
+  padding-left: 1.66%;
+  padding-right: 1.66%;
+}    
 
 .bottle-wrapper {
+  width: 250px;
+  margin: 20px auto;
   position: relative;
 }
 
-/* CAN NOT GET THIS WORKING
-#feature-circle {
+.feature-circle {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: block;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, .3);
-  position: absolute;
-  margin-top: 50px;
-  display: block;
+  background-color: rgba(0, 0, 0, .2);
   z-index: 10;
-  transition: all .3s ease-in;
-  opacity: 0;
+  opacity: .5;
+  transition: all .3s ease-in-out;
 }
 
-#feature-circle:before {
+.feature-circle:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.feature-circle:before {
   content: '';
-  background-color: black;
+  background-color: brown;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -324,9 +345,38 @@ section h2 {
   top: 50%;
   position: relative;
   transform: translateY(-50%);
-}*/
+}
 
-section h3 {
+.position1 {
+  top: 30px;
+  left: 76px;
+}
+
+.position2 {
+  top: 175px;
+  left: 21px;
+}
+
+.position3 {
+  top: 100px;
+  left: 164px;
+}
+
+.position4 {
+  top: 290px;
+  left: 215px;
+}
+
+.faded { 
+  opacity: .3;
+}
+
+
+
+
+/*------- HOW IT WORKS DIV --------*/
+
+h3 {
   font-size: 36px;
   font-family: "Josefin+Sans", sans-serif;
   font-weight: 300;
@@ -334,11 +384,6 @@ section h3 {
   line-height: 1;
   padding: 0;
 }
-
-
-
-
-/*------- HOW IT WORKS DIV --------*/
 
 .how-it-works {
   background: white;

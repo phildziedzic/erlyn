@@ -122,6 +122,8 @@ nav img{
   height: 40px;
   float: left;
   margin-top: 12px;
+  -webkit-filter: drop-shadow(1px 1px 1px black);
+
 }
 
 nav ul {
@@ -144,6 +146,7 @@ nav a {
   padding: 15px;
   margin-top: 5px;
   opacity: .5;
+  text-shadow: 1px 1px 1px black;
   transition: opacity .3s ease-out;
 }
 
@@ -325,13 +328,12 @@ section h2 {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, .2);
   z-index: 10;
-  opacity: .5;
   transition: all .3s ease-in-out;
 }
 
 .feature-circle:hover {
-  opacity: 1;
-  transform: scale(1.3);
+/*  opacity: 1;
+*/  transform: scale(1.3);
 }
 
 .feature-circle:before {
@@ -415,23 +417,43 @@ h3 {
   color: white;
 }
 
-.bottle-pour {
+.party-pour {
   width: 200px;
   padding-right: 150px;
   padding-bottom: 25px;
 }
 
-.drink-glass {
-  width: 300px;
-}
-
 .stream1 {
+  position: relative;
+  bottom: 25px;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  width: 15px;
-  height: 100px;
-  background: white;
+  width: 7px;
+  height: 225px;
+  background: brown;
+  opacity: 1;
+  z-index: 1;
+  -webkit-animation: streamy .5s infinite ease-in-out;
+  animation:         streamy .5s infinite ease-in-out;
+}
+
+@-webkit-keyframes streamy {
+  0%   { transform: scaleX(1); }
+  50%   { transform: scaleX(1.3); }
+  100% { transform: scaleX(1); }
+}
+@keyframes streamy {
+  0%   { transform: scaleX(1); }
+  50%   { transform: scaleX(1.3); }
+  100% { transform: scaleX(1); }
+}
+
+.party-glass {
+  width: 150px;
+  position: relative;
+  bottom: 100px;
+  z-index: 10;
 }
 
 /*------- REFILL SECTION --------*/
@@ -468,6 +490,8 @@ h3 {
   background: brown;
   opacity: 1;
   z-index: 1;
+  -webkit-animation: streamy .5s infinite ease-in-out;
+  animation:         streamy .5s infinite ease-in-out;
 }
 
 /*------- BACK HOME SECTION --------*/
@@ -485,14 +509,25 @@ h3 {
 .home-bar {
   width: 300px;
   position: relative;
-  bottom: 75;
+  bottom: 50px;
 }
 
 .home-bottle {
   width: 85px;
   position: relative;
-  bottom: -110px;
+  bottom: -60px;
   right: 90px;
+  -webkit-animation: drop-in 1s infinite alternate ease-in-out;
+  animation:         drop-in 1s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes drop-in {
+  0%   { transform: translateY(-200); }
+  100% { transform: translateY(0); }
+}
+@keyframes drop-in {
+  0%   { transform: translateY(-200); }
+  100% { transform: translateY(0); }
 }
 
 

@@ -16,6 +16,13 @@
 //     }, 600); 
 // });
 
+$("#nav-home").on("click", function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+	    scrollTop: $("nav").offset().top
+	}, 500);
+});
+
 $("#nav-design").on("click", function(e) {
 	e.preventDefault();
 	$('html, body').animate({

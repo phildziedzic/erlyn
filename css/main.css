@@ -969,6 +969,7 @@ footer a {
     top: 0px;
     right: 0px;
     height: 0px;
+    visibility: none;
  }
 
   nav li {

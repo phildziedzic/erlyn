@@ -8,20 +8,12 @@
 	// same as above
 
 //----------------------NAVIGATION------------------------//
-
-// $("#nav-design").on("click", function(e) {
+// $("#nav-home").on("click", function(e) {
 // 	e.preventDefault();
-//     $("body, html").animate({ 
-//         scrollTop: $( $(this).attr('href') ).offset().top 
-//     }, 600); 
+// 	$('html, body').animate({
+// 	    scrollTop: $("nav").offset().top
+// 	}, 500);
 // });
-
-$("#nav-home").on("click", function(e) {
-	e.preventDefault();
-	$('html, body').animate({
-	    scrollTop: $("nav").offset().top
-	}, 500);
-});
 
 $("#nav-design").on("click", function(e) {
 	e.preventDefault();
@@ -119,13 +111,26 @@ $('.position4').hover( function () {
 		// info form requesting contact info
 
 //----------------------HOW ERLYN WORKS 3 DIV------------------------//
-// on scroll down further...
-	// background image of shelf fades in
-	// bottle slides over to shelf next to 2 other bottles
-	// text 5 fades in
+var distance = $('#menu').offset().top;
 
-// if narrow screen (mobile)
-	// show static image of erlyn bottle back on shelf next to others
+$(window).on('scroll', function() {
+	console.log($(window).scrollTop());
+	
+	if ($(this).scrollTop() >= distance ) {
+		$('.home-bottle').slideDown(300);
+	}
+
+});
+
+// console.log($("#home-bottle").offset().top);
+
+// $(window).scroll(function(){
+//     if ($(this).scrollTop() > 50) {
+//         $('.home-bottle').slideDown('slow');
+//     } else {
+//         $('.home-bottle').slideUp('slow');
+//     }
+// });
 
 //----------------------ORDER DIV------------------------//
 // three order packages pop in

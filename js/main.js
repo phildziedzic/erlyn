@@ -55,6 +55,24 @@ $("#nav-order").on("click", function(e) {
 
 //----------------------THE ERLYN DESIGN DIV------------------------//
 
+
+
+// ANIMATE ONE BY ONE, CAN'T GET WORKING
+
+// var distance0 = $('.erlyn-design').offset().top;
+// $(window).on ('scroll', function() {
+//     if ($(this).scrollTop() > distance0) {
+//         $('.position1').fadeIn("slow");
+//         $('.position2').fadeIn("slow");
+//         $('.position3').fadeIn("slow");
+//         $('.position4').fadeIn("slow");
+//     } else {
+//         $('.feature-circle').fadeOut("slow");
+//     }
+// });
+
+
+
 $('.position1').hover( function () {
 	$('#durable').toggleClass('faded');
 });
@@ -77,32 +95,27 @@ $('.position4').hover( function () {
 	// tap X to close and open others if desired
 
 //----------------------HOW ERLYN WORKS 1 DIV------------------------//
-// on scrolling down...
-	// Bottle gets smaller, and anchors to center of screen, fixed position
-	// background party image fades in
-	// music notes fade up and bottle shakes
-	// text 1 fades in
-	// bottle rises up a bit
-	// text 1 fades out, text 2 fades in
-	// drinking glass slides in from right, stops under bottle and bottle rotates, liquid drains
-	// glass slides out to left
-	// ^ repeat glass sliding in and out
-	// text 2 fades out, text 3 fades in
-	// bottle rotates back upright, now empty
-
 // if narrow screen (mobile)
 	// show static image of glasses being filled from the Erlyn bottle
 
 //----------------------HOW ERLYN WORKS 2 DIV------------------------//
-// on scroll down further...
-	// background image of distillery fades in
-	// text 3 out, text 4 in, bottle slides down and left, and whiskey barrel icon fades in above it
-	// liquid pours into bottle and fills up
-	// google map fades in to the right with location pins, "become a partner" beneath
-	// on click partner button
-		// info form pops in front of screen asking for contact info
-		// if fields not submitted, highlight in red
-		// otherwise display success message and dismiss window
+
+var distance2 = $('#refill').offset().top;
+
+$(window).on ('scroll', function() {
+    if ($(this).scrollTop() > distance2) {
+        $('.stream2').slideDown('slow');
+        $('.refill-filled').fadeIn('slow');
+    } else {
+        $('.stream2').slideUp('slow');
+        $('.refill-filled').fadeOut('slow');
+    }
+});
+
+// on click partner button
+	// info form pops in front of screen asking for contact info
+	// if fields not submitted, highlight in red
+	// otherwise display success message and dismiss window
 
 // if narrow screen (mobile)
 	// show static image of erlyn bottle being filled from a tap at distillery
@@ -110,27 +123,20 @@ $('.position4').hover( function () {
 	// on tap "partner" button beneath map
 		// info form requesting contact info
 
+
+
+
 //----------------------HOW ERLYN WORKS 3 DIV------------------------//
-var distance = $('#menu').offset().top;
 
-$(window).on('scroll', function() {
-	console.log($(window).scrollTop());
-	
-	if ($(this).scrollTop() >= distance ) {
-		$('.home-bottle').slideDown(300);
-	}
+var distance3 = $('#home').offset().top;
 
+$(window).on ('scroll', function() {
+    if ($(this).scrollTop() > distance3) {
+        $('.home-bottle').fadeIn('slow');
+    } else {
+        $('.home-bottle').fadeOut('slow');
+    }
 });
-
-// console.log($("#home-bottle").offset().top);
-
-// $(window).scroll(function(){
-//     if ($(this).scrollTop() > 50) {
-//         $('.home-bottle').slideDown('slow');
-//     } else {
-//         $('.home-bottle').slideUp('slow');
-//     }
-// });
 
 //----------------------ORDER DIV------------------------//
 // three order packages pop in
@@ -138,7 +144,6 @@ $(window).on('scroll', function() {
 	
 	// on click order button
 $('.order-button').on('click', function(e) {
-	// $(this).removeClass(*);
 	$('.modal').addClass('show-modal');
 	e.preventDefault();
 });

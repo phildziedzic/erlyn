@@ -333,8 +333,7 @@ section h2 {
 }
 
 .feature-circle:hover {
-/*  opacity: 1;
-*/  transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .feature-circle:before {
@@ -483,17 +482,28 @@ h3 {
   background-size: cover;
   height: 700px;
   color: white;
+  position: relative;
 }
 
 .refill-barrel {
   width: 250px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.barrel-wrapper {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .refill-filled {
   width: 100px;
-  position: relative;
-  bottom: 160px;
-  z-index: 10;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 7%;
+  left: 40%;
+  z-index: 100;
 }
 
 .stream2 {
@@ -507,8 +517,8 @@ h3 {
   background: brown;
   opacity: 1;
   z-index: 1;
-  -webkit-animation: streamy .5s infinite ease-in-out;
-  animation:         streamy .5s infinite ease-in-out;
+  -webkit-animation: streamy 1s infinite ease-in-out;
+  animation:         streamy 1s infinite ease-in-out;
 }
 
 /*------- BACK HOME SECTION --------*/
@@ -521,19 +531,27 @@ h3 {
   background-size: cover;
   height: 700px;
   color: white;
+  position: relative;
 }
 
 .home-bar {
   width: 300px;
   position: relative;
-  bottom: 50px;
+  bottom: -67px;
+  margin: 0 auto;
+}
+
+.bar-wrapper {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .home-bottle {
   width: 85px;
-  position: relative;
-  bottom: -60px;
-  right: 90px;
+  position: absolute;
+  top: 21%;
+  left: 25%;
   z-index: 10;
 }
 
@@ -775,10 +793,15 @@ li {
   font-family: "Josefin+Sans", sans-serif;
   font-weight: 400;
   font-size: 24px;
+  color: #171714;
   padding: 10px;
   position: absolute;
   right: 3%;
   top: 3%;
+}
+
+.close-x:visited{
+  text-decoration: none;
 }
 
 /*------- FOOTER --------*/

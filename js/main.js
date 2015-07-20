@@ -14,8 +14,12 @@
 // 	    scrollTop: $("nav").offset().top
 // 	}, 500);
 // });
-$('#menu').toggleClass('mobile-slide');
-$('#menu').toggleClass('hidden');
+
+if ($(window).width() < 600) {
+    $('#menu').toggleClass('mobile-slide');
+    $('#menu').toggleClass('hidden');
+}
+
 
 $(".hamburger").on("click", function(e) {
     e.preventDefault();

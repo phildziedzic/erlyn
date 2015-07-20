@@ -482,7 +482,18 @@ h3 {
   color: white;
 }
 
+.home-bar {
+  width: 300px;
+  position: relative;
+  bottom: 75;
+}
 
+.home-bottle {
+  width: 85px;
+  position: relative;
+  bottom: -110px;
+  right: 90px;
+}
 
 
 /*------- ORDER DIV --------*/

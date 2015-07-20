@@ -9,12 +9,33 @@
 
 //----------------------NAVIGATION------------------------//
 
-// $(".jumper").on("click", function(e) {
+// $("#nav-design").on("click", function(e) {
 // 	e.preventDefault();
 //     $("body, html").animate({ 
 //         scrollTop: $( $(this).attr('href') ).offset().top 
 //     }, 600); 
 // });
+
+$("#nav-design").on("click", function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+	    scrollTop: $(".erlyn-design").offset().top
+	}, 500);
+});
+
+$("#nav-how").on("click", function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+	    scrollTop: $(".how-it-works").offset().top
+	}, 500);
+});
+
+$("#nav-order").on("click", function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+	    scrollTop: $(".order").offset().top
+	}, 500);
+});
 
 // clicking on nav element
 	// remove underline from all others
